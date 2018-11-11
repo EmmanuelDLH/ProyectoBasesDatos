@@ -26,6 +26,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelIngresoDatosPersonas.hide();
         jPanelIngresoDatosProyecto.hide();
         jPanelIngresoDatosObras.hide();
+        jPanelIngresoProveedores.hide();
         jPanelIngresoDatosHoras.hide();
         jPanelIngresarHerramientas.hide();
         jPanelCrearPrestamos.hide();
@@ -69,6 +70,12 @@ public class Menu extends javax.swing.JFrame {
         jCheckBoxEmpleado = new javax.swing.JCheckBox();
         jCheckBoxContProyecto = new javax.swing.JCheckBox();
         jCheckBoxContProveedor = new javax.swing.JCheckBox();
+        jLabel18 = new javax.swing.JLabel();
+        jTextFieldCargo_PersonasCProyecto = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jTextFieldAreaCProveedor_Personas = new javax.swing.JTextField();
+        jTextFieldCodProveedor_Personas = new javax.swing.JTextField();
         jPanelIngresoDatosProyecto = new javax.swing.JPanel();
         jIDProyecto = new javax.swing.JLabel();
         jTipoProyecto = new javax.swing.JLabel();
@@ -82,7 +89,7 @@ public class Menu extends javax.swing.JFrame {
         jTextFieldDescripcionProyecto = new javax.swing.JTextField();
         jTextFieldLugarProyecto = new javax.swing.JTextField();
         jTextFieldPermisoConstruccionProyecto = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        jButtonIngresarProyecto = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jPanelIngresoDatosObras = new javax.swing.JPanel();
         jID_Obra = new javax.swing.JLabel();
@@ -93,8 +100,17 @@ public class Menu extends javax.swing.JFrame {
         jTextFieldNombre_Obras = new javax.swing.JTextField();
         jTextFieldID_Proyecto_Obras = new javax.swing.JTextField();
         jTextFieldDescripcion_Obras = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
+        jButtonIngresarObra = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jPanelIngresoProveedores = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jTextFieldCodProveedor = new javax.swing.JTextField();
+        jTextFieldNombre_Proveedor = new javax.swing.JTextField();
+        jTextFieldDireccion_Proveedor = new javax.swing.JTextField();
+        jButtonIngresarProveedor = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
         jPanelIngresoDatosHoras = new javax.swing.JPanel();
         jHoras = new javax.swing.JLabel();
         jFechaInicio = new javax.swing.JLabel();
@@ -106,7 +122,7 @@ public class Menu extends javax.swing.JFrame {
         jTextFieldFechaFinal_Trabaja = new javax.swing.JTextField();
         jTextFieldCedulaEmpleado_Trabaja = new javax.swing.JTextField();
         jTextFieldID_Obra_Trabaja = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
+        jButtonIngresarHorasTrabajadas = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jPanelIngresarHerramientas = new javax.swing.JPanel();
         jNombreHerramienta = new javax.swing.JLabel();
@@ -115,7 +131,7 @@ public class Menu extends javax.swing.JFrame {
         jTextFieldNombre_Herramienta = new javax.swing.JTextField();
         jTextFieldDescripcion_Herramienta = new javax.swing.JTextField();
         jTextFieldPlaca_Herramienta = new javax.swing.JTextField();
-        jButton5 = new javax.swing.JButton();
+        jButtonIngresarHerramienta = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jPanelCrearPrestamos = new javax.swing.JPanel();
         jID_Prestamo = new javax.swing.JLabel();
@@ -129,7 +145,7 @@ public class Menu extends javax.swing.JFrame {
         jTextFieldFechaDevolucionPrestamo = new javax.swing.JTextField();
         jTextFieldPlacaHerramientaPrestamo = new javax.swing.JTextField();
         jTextFieldCedEmpleadoPrestamo = new javax.swing.JTextField();
-        jButton6 = new javax.swing.JButton();
+        jButtonCrearPrestamos = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jPanelPagarEmpleados = new javax.swing.JPanel();
         jNumPago = new javax.swing.JLabel();
@@ -138,7 +154,7 @@ public class Menu extends javax.swing.JFrame {
         jTextFieldNumPago = new javax.swing.JTextField();
         jTextFieldCedEmpleadoPagos = new javax.swing.JTextField();
         jTextFieldMontoPagos = new javax.swing.JTextField();
-        jButton7 = new javax.swing.JButton();
+        jButtonCrearPago = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jPanelCrearFacturas = new javax.swing.JPanel();
         jIDProyectoFactura = new javax.swing.JLabel();
@@ -147,13 +163,13 @@ public class Menu extends javax.swing.JFrame {
         jMontoFactura = new javax.swing.JLabel();
         jDetalleFactura = new javax.swing.JLabel();
         jCodProveedorFactura = new javax.swing.JLabel();
-        jTextFieldICProyecto_Factura = new javax.swing.JTextField();
+        jTextFieldIDProyecto_Factura = new javax.swing.JTextField();
         jTextFieldNumFactura = new javax.swing.JTextField();
         jTextFieldFecha_Factura = new javax.swing.JTextField();
         jTextFieldMonto_Factura = new javax.swing.JTextField();
         jTextFieldDetalle_Factura = new javax.swing.JTextField();
         jTextFieldCodProveedor_Factura = new javax.swing.JTextField();
-        jButton8 = new javax.swing.JButton();
+        jButtonCrearFacturas = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jPanelConsultaDatos = new javax.swing.JPanel();
         jTextArea1 = new javax.swing.JTextArea();
@@ -183,7 +199,7 @@ public class Menu extends javax.swing.JFrame {
         jTextFieldCantonAlterar = new javax.swing.JTextField();
         jDistritoAlterar = new javax.swing.JLabel();
         jTextFieldDistritoAlterar = new javax.swing.JTextField();
-        jButton9 = new javax.swing.JButton();
+        jButtonAlterarPersona = new javax.swing.JButton();
         jPanelAlterarProyectos = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jIDProyectoAlterar = new javax.swing.JLabel();
@@ -239,6 +255,7 @@ public class Menu extends javax.swing.JFrame {
         jIngresarPersonas = new javax.swing.JMenu();
         jIngresarProyectos = new javax.swing.JMenu();
         jIngresarObrasProyecto = new javax.swing.JMenu();
+        jIngresarProveedores = new javax.swing.JMenu();
         jIngresarHorasTrabajo = new javax.swing.JMenu();
         jIngresarHerramientas = new javax.swing.JMenu();
         jCrearPrestamos = new javax.swing.JMenu();
@@ -258,7 +275,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelInicio.setLayout(jPanelInicioLayout);
         jPanelInicioLayout.setHorizontalGroup(
             jPanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 485, Short.MAX_VALUE)
+            .addGap(0, 505, Short.MAX_VALUE)
         );
         jPanelInicioLayout.setVerticalGroup(
             jPanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -303,16 +320,48 @@ public class Menu extends javax.swing.JFrame {
 
         jCheckBoxContProveedor.setText("Contacto Proveedor");
 
+        jLabel18.setText("Cargo:");
+
+        jTextFieldCargo_PersonasCProyecto.setEditable(false);
+        jTextFieldCargo_PersonasCProyecto.setFocusable(false);
+        jTextFieldCargo_PersonasCProyecto.setOpaque(false);
+
+        jLabel19.setText("Area:");
+
+        jLabel20.setText("Codigo Proveedor:");
+
         javax.swing.GroupLayout jPanelIngresoDatosPersonasLayout = new javax.swing.GroupLayout(jPanelIngresoDatosPersonas);
         jPanelIngresoDatosPersonas.setLayout(jPanelIngresoDatosPersonasLayout);
         jPanelIngresoDatosPersonasLayout.setHorizontalGroup(
             jPanelIngresoDatosPersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelIngresoDatosPersonasLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanelIngresoDatosPersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanelIngresoDatosPersonasLayout.createSequentialGroup()
+                        .addComponent(jCheckBoxEmpleado)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextFieldCargo_PersonasCProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel19))
+                    .addComponent(jLabel20))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanelIngresoDatosPersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextFieldAreaCProveedor_Personas)
+                    .addComponent(jTextFieldCodProveedor_Personas, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
+                .addGap(73, 73, 73))
             .addGroup(jPanelIngresoDatosPersonasLayout.createSequentialGroup()
                 .addGroup(jPanelIngresoDatosPersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelIngresoDatosPersonasLayout.createSequentialGroup()
-                        .addGap(146, 146, 146)
+                        .addGap(166, 166, 166)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanelIngresoDatosPersonasLayout.createSequentialGroup()
+                        .addGap(160, 160, 160)
+                        .addComponent(jButtonIngresarPersonas))
+                    .addGroup(jPanelIngresoDatosPersonasLayout.createSequentialGroup()
+                        .addGap(141, 141, 141)
                         .addGroup(jPanelIngresoDatosPersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
                             .addGroup(jPanelIngresoDatosPersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(jPanelIngresoDatosPersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(jPanelIngresoDatosPersonasLayout.createSequentialGroup()
@@ -345,26 +394,19 @@ public class Menu extends javax.swing.JFrame {
                                 .addGap(28, 28, 28)
                                 .addGroup(jPanelIngresoDatosPersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextFieldCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(jPanelIngresoDatosPersonasLayout.createSequentialGroup()
-                        .addGap(168, 168, 168)
-                        .addComponent(jButtonIngresarPersonas)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelIngresoDatosPersonasLayout.createSequentialGroup()
-                .addGap(0, 76, Short.MAX_VALUE)
-                .addComponent(jCheckBoxEmpleado)
-                .addGap(18, 18, 18)
-                .addComponent(jCheckBoxContProyecto)
-                .addGap(18, 18, 18)
-                .addComponent(jCheckBoxContProveedor)
-                .addGap(64, 64, 64))
+                                    .addComponent(jTextFieldCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanelIngresoDatosPersonasLayout.createSequentialGroup()
+                                .addComponent(jCheckBoxContProyecto)
+                                .addGap(37, 37, 37)
+                                .addComponent(jCheckBoxContProveedor)))))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
         jPanelIngresoDatosPersonasLayout.setVerticalGroup(
             jPanelIngresoDatosPersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelIngresoDatosPersonasLayout.createSequentialGroup()
-                .addContainerGap(126, Short.MAX_VALUE)
+                .addGap(53, 53, 53)
                 .addComponent(jLabel1)
-                .addGap(47, 47, 47)
+                .addGap(39, 39, 39)
                 .addGroup(jPanelIngresoDatosPersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCedula)
                     .addComponent(jTextFieldCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -392,14 +434,24 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(jPanelIngresoDatosPersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jDistrito)
                     .addComponent(jTextFieldDistrito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
+                .addGap(36, 36, 36)
                 .addGroup(jPanelIngresoDatosPersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBoxEmpleado)
                     .addComponent(jCheckBoxContProyecto)
                     .addComponent(jCheckBoxContProveedor))
-                .addGap(31, 31, 31)
+                .addGap(18, 18, 18)
+                .addGroup(jPanelIngresoDatosPersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(jTextFieldCargo_PersonasCProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel19)
+                    .addComponent(jTextFieldAreaCProveedor_Personas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelIngresoDatosPersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(jTextFieldCodProveedor_Personas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                 .addComponent(jButtonIngresarPersonas)
-                .addGap(67, 67, 67))
+                .addGap(47, 47, 47))
         );
 
         jIDProyecto.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -420,19 +472,13 @@ public class Menu extends javax.swing.JFrame {
         jPermisoConstruccionProyecto.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jPermisoConstruccionProyecto.setText("Permiso Construccion:");
 
-        jTextFieldIDProyecto.setText("jTextField8");
-
-        jTextFieldTipoProyecto.setText("jTextField9");
-
-        jTextFieldPresupuestoProyecto.setText("jTextField10");
-
-        jTextFieldDescripcionProyecto.setText("jTextField11");
-
-        jTextFieldLugarProyecto.setText("jTextField12");
-
-        jTextFieldPermisoConstruccionProyecto.setText("jTextField13");
-
-        jButton2.setText("Ingresar Proyecto");
+        jButtonIngresarProyecto.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonIngresarProyecto.setText("Ingresar Proyecto");
+        jButtonIngresarProyecto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonIngresarProyectoActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("Ingresar Proyectos");
@@ -462,11 +508,11 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(jTextFieldPermisoConstruccionProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanelIngresoDatosProyectoLayout.createSequentialGroup()
                         .addGap(71, 71, 71)
-                        .addComponent(jButton2))
+                        .addComponent(jButtonIngresarProyecto))
                     .addGroup(jPanelIngresoDatosProyectoLayout.createSequentialGroup()
                         .addGap(46, 46, 46)
                         .addComponent(jLabel2)))
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
         jPanelIngresoDatosProyectoLayout.setVerticalGroup(
             jPanelIngresoDatosProyectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -498,7 +544,7 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(jPermisoConstruccionProyecto)
                     .addComponent(jTextFieldPermisoConstruccionProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56)
-                .addComponent(jButton2)
+                .addComponent(jButtonIngresarProyecto)
                 .addContainerGap(160, Short.MAX_VALUE))
         );
 
@@ -514,15 +560,13 @@ public class Menu extends javax.swing.JFrame {
         jDescripcion_Obra.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jDescripcion_Obra.setText("Descripcion:");
 
-        jTextFieldID_Obras.setText("jTextField1");
-
-        jTextFieldNombre_Obras.setText("jTextField2");
-
-        jTextFieldID_Proyecto_Obras.setText("jTextField3");
-
-        jTextFieldDescripcion_Obras.setText("jTextField4");
-
-        jButton3.setText("Ingresar Obra");
+        jButtonIngresarObra.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonIngresarObra.setText("Ingresar Obra");
+        jButtonIngresarObra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonIngresarObraActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Ingresar Obras");
@@ -553,9 +597,9 @@ public class Menu extends javax.swing.JFrame {
                                 .addComponent(jLabel3)
                                 .addGap(34, 34, 34))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelIngresoDatosObrasLayout.createSequentialGroup()
-                                .addComponent(jButton3)
+                                .addComponent(jButtonIngresarObra)
                                 .addGap(60, 60, 60)))))
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
         jPanelIngresoDatosObrasLayout.setVerticalGroup(
             jPanelIngresoDatosObrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -579,8 +623,75 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(jDescripcion_Obra)
                     .addComponent(jTextFieldDescripcion_Obras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
-                .addComponent(jButton3)
+                .addComponent(jButtonIngresarObra)
                 .addContainerGap(201, Short.MAX_VALUE))
+        );
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel14.setText("Codigo Proveedor:");
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel15.setText("Nombre:");
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel16.setText("Direccion:");
+
+        jButtonIngresarProveedor.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonIngresarProveedor.setText("Ingresar Proveedor");
+        jButtonIngresarProveedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonIngresarProveedorActionPerformed(evt);
+            }
+        });
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel17.setText("Ingresar Proveedores");
+
+        javax.swing.GroupLayout jPanelIngresoProveedoresLayout = new javax.swing.GroupLayout(jPanelIngresoProveedores);
+        jPanelIngresoProveedores.setLayout(jPanelIngresoProveedoresLayout);
+        jPanelIngresoProveedoresLayout.setHorizontalGroup(
+            jPanelIngresoProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelIngresoProveedoresLayout.createSequentialGroup()
+                .addGap(96, 96, 96)
+                .addGroup(jPanelIngresoProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelIngresoProveedoresLayout.createSequentialGroup()
+                        .addGroup(jPanelIngresoProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel16)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel14))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanelIngresoProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextFieldCodProveedor)
+                            .addComponent(jTextFieldNombre_Proveedor)
+                            .addComponent(jTextFieldDireccion_Proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanelIngresoProveedoresLayout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jLabel17))
+                    .addGroup(jPanelIngresoProveedoresLayout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addComponent(jButtonIngresarProveedor)))
+                .addContainerGap(174, Short.MAX_VALUE))
+        );
+        jPanelIngresoProveedoresLayout.setVerticalGroup(
+            jPanelIngresoProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelIngresoProveedoresLayout.createSequentialGroup()
+                .addContainerGap(200, Short.MAX_VALUE)
+                .addComponent(jLabel17)
+                .addGap(41, 41, 41)
+                .addGroup(jPanelIngresoProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(jTextFieldCodProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelIngresoProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(jTextFieldNombre_Proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelIngresoProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(jTextFieldDireccion_Proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addComponent(jButtonIngresarProveedor)
+                .addGap(171, 171, 171))
         );
 
         jHoras.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -598,17 +709,13 @@ public class Menu extends javax.swing.JFrame {
         jID_Obra_Trabaja.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jID_Obra_Trabaja.setText("ID Obra:");
 
-        jTextFieldHoras_Trabaja.setText("jTextField1");
-
-        jTextFieldFechaInicio_Trabaja.setText("jTextField2");
-
-        jTextFieldFechaFinal_Trabaja.setText("jTextField3");
-
-        jTextFieldCedulaEmpleado_Trabaja.setText("jTextField4");
-
-        jTextFieldID_Obra_Trabaja.setText("jTextField5");
-
-        jButton4.setText("Ingresar Horas Trabajadas");
+        jButtonIngresarHorasTrabajadas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonIngresarHorasTrabajadas.setText("Ingresar Horas Trabajadas");
+        jButtonIngresarHorasTrabajadas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonIngresarHorasTrabajadasActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("Ingresar Horas Trabajo");
@@ -618,7 +725,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelIngresoDatosHorasLayout.setHorizontalGroup(
             jPanelIngresoDatosHorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelIngresoDatosHorasLayout.createSequentialGroup()
-                .addContainerGap(125, Short.MAX_VALUE)
+                .addContainerGap(145, Short.MAX_VALUE)
                 .addGroup(jPanelIngresoDatosHorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelIngresoDatosHorasLayout.createSequentialGroup()
                         .addComponent(jLabel4)
@@ -639,8 +746,8 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(jTextFieldID_Obra_Trabaja, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(120, 120, 120))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelIngresoDatosHorasLayout.createSequentialGroup()
-                        .addComponent(jButton4)
-                        .addGap(160, 160, 160))))
+                        .addComponent(jButtonIngresarHorasTrabajadas)
+                        .addGap(151, 151, 151))))
         );
         jPanelIngresoDatosHorasLayout.setVerticalGroup(
             jPanelIngresoDatosHorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -668,7 +775,7 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(jID_Obra_Trabaja)
                     .addComponent(jTextFieldID_Obra_Trabaja, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
-                .addComponent(jButton4)
+                .addComponent(jButtonIngresarHorasTrabajadas)
                 .addContainerGap(232, Short.MAX_VALUE))
         );
 
@@ -681,13 +788,13 @@ public class Menu extends javax.swing.JFrame {
         jPlacaHerramienta.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jPlacaHerramienta.setText("Placa:");
 
-        jTextFieldNombre_Herramienta.setText("jTextField1");
-
-        jTextFieldDescripcion_Herramienta.setText("jTextField2");
-
-        jTextFieldPlaca_Herramienta.setText("jTextField3");
-
-        jButton5.setText("Ingresar Herramienta");
+        jButtonIngresarHerramienta.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonIngresarHerramienta.setText("Ingresar Herramienta");
+        jButtonIngresarHerramienta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonIngresarHerramientaActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setText("Ingresar Herramientas");
@@ -697,24 +804,25 @@ public class Menu extends javax.swing.JFrame {
         jPanelIngresarHerramientasLayout.setHorizontalGroup(
             jPanelIngresarHerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelIngresarHerramientasLayout.createSequentialGroup()
-                .addGap(122, 122, 122)
                 .addGroup(jPanelIngresarHerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelIngresarHerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel5)
-                        .addGroup(jPanelIngresarHerramientasLayout.createSequentialGroup()
-                            .addGroup(jPanelIngresarHerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jNombreHerramienta)
-                                .addComponent(jDescripcionHerramienta)
-                                .addComponent(jPlacaHerramienta))
-                            .addGap(44, 44, 44)
-                            .addGroup(jPanelIngresarHerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTextFieldNombre_Herramienta)
-                                .addComponent(jTextFieldDescripcion_Herramienta)
-                                .addComponent(jTextFieldPlaca_Herramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanelIngresarHerramientasLayout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jButton5)))
-                .addContainerGap(146, Short.MAX_VALUE))
+                        .addGap(122, 122, 122)
+                        .addGroup(jPanelIngresarHerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel5)
+                            .addGroup(jPanelIngresarHerramientasLayout.createSequentialGroup()
+                                .addGroup(jPanelIngresarHerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jNombreHerramienta)
+                                    .addComponent(jDescripcionHerramienta)
+                                    .addComponent(jPlacaHerramienta))
+                                .addGap(44, 44, 44)
+                                .addGroup(jPanelIngresarHerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextFieldNombre_Herramienta)
+                                    .addComponent(jTextFieldDescripcion_Herramienta)
+                                    .addComponent(jTextFieldPlaca_Herramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(jPanelIngresarHerramientasLayout.createSequentialGroup()
+                        .addGap(158, 158, 158)
+                        .addComponent(jButtonIngresarHerramienta)))
+                .addContainerGap(166, Short.MAX_VALUE))
         );
         jPanelIngresarHerramientasLayout.setVerticalGroup(
             jPanelIngresarHerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -734,7 +842,7 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(jPlacaHerramienta)
                     .addComponent(jTextFieldPlaca_Herramienta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
-                .addComponent(jButton5)
+                .addComponent(jButtonIngresarHerramienta)
                 .addContainerGap(254, Short.MAX_VALUE))
         );
 
@@ -755,17 +863,13 @@ public class Menu extends javax.swing.JFrame {
         jCedulaEmpleadoPrestamo.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jCedulaEmpleadoPrestamo.setText("Cedula Empleado:");
 
-        jTextFieldID_Prestamo.setText("jTextField1");
-
-        jTextFieldFechaPrestamo_Prestamo.setText("jTextField2");
-
-        jTextFieldFechaDevolucionPrestamo.setText("jTextField3");
-
-        jTextFieldPlacaHerramientaPrestamo.setText("jTextField4");
-
-        jTextFieldCedEmpleadoPrestamo.setText("jTextField5");
-
-        jButton6.setText("Crear Prestamo");
+        jButtonCrearPrestamos.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonCrearPrestamos.setText("Crear Prestamo");
+        jButtonCrearPrestamos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCrearPrestamosActionPerformed(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setText("Crear Prestamos");
@@ -804,9 +908,9 @@ public class Menu extends javax.swing.JFrame {
                                 .addComponent(jLabel6)
                                 .addGap(62, 62, 62))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCrearPrestamosLayout.createSequentialGroup()
-                                .addComponent(jButton6)
+                                .addComponent(jButtonCrearPrestamos)
                                 .addGap(88, 88, 88)))))
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addContainerGap(131, Short.MAX_VALUE))
         );
         jPanelCrearPrestamosLayout.setVerticalGroup(
             jPanelCrearPrestamosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -836,7 +940,7 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jCheckBoxDevolucionPrestamo)
                 .addGap(18, 18, 18)
-                .addComponent(jButton6)
+                .addComponent(jButtonCrearPrestamos)
                 .addContainerGap(202, Short.MAX_VALUE))
         );
 
@@ -849,13 +953,13 @@ public class Menu extends javax.swing.JFrame {
         jMontoPago.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jMontoPago.setText("Monto:");
 
-        jTextFieldNumPago.setText("jTextField6");
-
-        jTextFieldCedEmpleadoPagos.setText("jTextField7");
-
-        jTextFieldMontoPagos.setText("jTextField8");
-
-        jButton7.setText("Crear Pago");
+        jButtonCrearPago.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonCrearPago.setText("Crear Pago");
+        jButtonCrearPago.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCrearPagoActionPerformed(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel7.setText("Crear Pagos");
@@ -865,11 +969,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelPagarEmpleadosLayout.setHorizontalGroup(
             jPanelPagarEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelPagarEmpleadosLayout.createSequentialGroup()
-                .addGap(193, 193, 193)
-                .addComponent(jButton7)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPagarEmpleadosLayout.createSequentialGroup()
-                .addContainerGap(110, Short.MAX_VALUE)
+                .addContainerGap(130, Short.MAX_VALUE)
                 .addGroup(jPanelPagarEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPagarEmpleadosLayout.createSequentialGroup()
                         .addComponent(jLabel7)
@@ -884,7 +984,10 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(jTextFieldNumPago)
                             .addComponent(jTextFieldCedEmpleadoPagos)
                             .addComponent(jTextFieldMontoPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(106, 106, 106))))
+                        .addGap(106, 106, 106))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPagarEmpleadosLayout.createSequentialGroup()
+                        .addComponent(jButtonCrearPago)
+                        .addGap(200, 200, 200))))
         );
         jPanelPagarEmpleadosLayout.setVerticalGroup(
             jPanelPagarEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -903,9 +1006,9 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(jPanelPagarEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jMontoPago)
                     .addComponent(jTextFieldMontoPagos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
-                .addComponent(jButton7)
-                .addContainerGap(243, Short.MAX_VALUE))
+                .addGap(37, 37, 37)
+                .addComponent(jButtonCrearPago)
+                .addContainerGap(245, Short.MAX_VALUE))
         );
 
         jIDProyectoFactura.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -926,19 +1029,13 @@ public class Menu extends javax.swing.JFrame {
         jCodProveedorFactura.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jCodProveedorFactura.setText("Codigo Proveedor:");
 
-        jTextFieldICProyecto_Factura.setText("jTextField1");
-
-        jTextFieldNumFactura.setText("jTextField2");
-
-        jTextFieldFecha_Factura.setText("jTextField3");
-
-        jTextFieldMonto_Factura.setText("jTextField4");
-
-        jTextFieldDetalle_Factura.setText("jTextField5");
-
-        jTextFieldCodProveedor_Factura.setText("jTextField6");
-
-        jButton8.setText("Crear Factura");
+        jButtonCrearFacturas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonCrearFacturas.setText("Crear Factura");
+        jButtonCrearFacturas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCrearFacturasActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel8.setText("Crear Facturas");
@@ -963,16 +1060,16 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(jCodProveedorFactura))
                         .addGap(60, 60, 60)
                         .addGroup(jPanelCrearFacturasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldICProyecto_Factura)
+                            .addComponent(jTextFieldIDProyecto_Factura)
                             .addComponent(jTextFieldNumFactura)
                             .addComponent(jTextFieldFecha_Factura)
                             .addComponent(jTextFieldMonto_Factura)
                             .addComponent(jTextFieldDetalle_Factura)
                             .addComponent(jTextFieldCodProveedor_Factura, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanelCrearFacturasLayout.createSequentialGroup()
-                        .addGap(181, 181, 181)
-                        .addComponent(jButton8)))
-                .addContainerGap(101, Short.MAX_VALUE))
+                        .addGap(179, 179, 179)
+                        .addComponent(jButtonCrearFacturas)))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
         jPanelCrearFacturasLayout.setVerticalGroup(
             jPanelCrearFacturasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -982,7 +1079,7 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCrearFacturasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jIDProyectoFactura)
-                    .addComponent(jTextFieldICProyecto_Factura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldIDProyecto_Factura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelCrearFacturasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jNumFactura)
@@ -1003,9 +1100,9 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(jPanelCrearFacturasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCodProveedorFactura)
                     .addComponent(jTextFieldCodProveedor_Factura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addComponent(jButton8)
-                .addContainerGap(211, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addComponent(jButtonCrearFacturas)
+                .addContainerGap(212, Short.MAX_VALUE))
         );
 
         jTextArea1.setEditable(false);
@@ -1137,7 +1234,7 @@ public class Menu extends javax.swing.JFrame {
                     .addGroup(jPanelConsultaDatosLayout.createSequentialGroup()
                         .addGap(183, 183, 183)
                         .addComponent(jButtonConsultarTodo)))
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
         jPanelConsultaDatosLayout.setVerticalGroup(
             jPanelConsultaDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1173,39 +1270,31 @@ public class Menu extends javax.swing.JFrame {
         jCedulaAlterar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jCedulaAlterar.setText("Cedula:");
 
-        jTextFieldCedulaAlterar.setText("jTextField1");
-
         jNombreAlterar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jNombreAlterar.setText("Nombre:");
-
-        jTextFieldNombreAlterar.setText("jTextField2");
 
         jApellido1Alterar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jApellido1Alterar.setText("Apellido1:");
 
-        jTextFieldApellido1Alterar.setText("jTextField3");
-
         jApellido2Alterar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jApellido2Alterar.setText("Apellido2:");
-
-        jTextFieldApellido2Alterar.setText("jTextField4");
 
         jProvinciaAlterar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jProvinciaAlterar.setText("Provincia:");
 
-        jTextFieldProvinciaAlterar.setText("jTextField5");
-
         jCantonAlterar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jCantonAlterar.setText("Canton:");
-
-        jTextFieldCantonAlterar.setText("jTextField6");
 
         jDistritoAlterar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jDistritoAlterar.setText("Distrito:");
 
-        jTextFieldDistritoAlterar.setText("jTextField7");
-
-        jButton9.setText("Alterar Persona");
+        jButtonAlterarPersona.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonAlterarPersona.setText("Alterar Persona");
+        jButtonAlterarPersona.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAlterarPersonaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelAlterarPersonasLayout = new javax.swing.GroupLayout(jPanelAlterarPersonas);
         jPanelAlterarPersonas.setLayout(jPanelAlterarPersonasLayout);
@@ -1251,11 +1340,11 @@ public class Menu extends javax.swing.JFrame {
                                     .addComponent(jTextFieldCedulaAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanelAlterarPersonasLayout.createSequentialGroup()
                         .addGap(184, 184, 184)
-                        .addComponent(jButton9))
+                        .addComponent(jButtonAlterarPersona))
                     .addGroup(jPanelAlterarPersonasLayout.createSequentialGroup()
                         .addGap(157, 157, 157)
                         .addComponent(jLabel9)))
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addContainerGap(180, Short.MAX_VALUE))
         );
         jPanelAlterarPersonasLayout.setVerticalGroup(
             jPanelAlterarPersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1291,7 +1380,7 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(jDistritoAlterar)
                     .addComponent(jTextFieldDistritoAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
-                .addComponent(jButton9)
+                .addComponent(jButtonAlterarPersona)
                 .addContainerGap(191, Short.MAX_VALUE))
         );
 
@@ -1356,7 +1445,7 @@ public class Menu extends javax.swing.JFrame {
                     .addGroup(jPanelAlterarProyectosLayout.createSequentialGroup()
                         .addGap(183, 183, 183)
                         .addComponent(jButton10)))
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addContainerGap(134, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAlterarProyectosLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel10)
@@ -1446,7 +1535,7 @@ public class Menu extends javax.swing.JFrame {
                     .addGroup(jPanelAlterarObrasLayout.createSequentialGroup()
                         .addGap(177, 177, 177)
                         .addComponent(jLabel11)))
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
         jPanelAlterarObrasLayout.setVerticalGroup(
             jPanelAlterarObrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1517,7 +1606,7 @@ public class Menu extends javax.swing.JFrame {
                     .addGroup(jPanelAlterarHerramientasLayout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addComponent(jLabel13)))
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addContainerGap(166, Short.MAX_VALUE))
         );
         jPanelAlterarHerramientasLayout.setVerticalGroup(
             jPanelAlterarHerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1609,7 +1698,7 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAlterarPrestamosLayout.createSequentialGroup()
                                 .addComponent(jButton12)
                                 .addGap(88, 88, 88)))))
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
         jPanelAlterarPrestamosLayout.setVerticalGroup(
             jPanelAlterarPrestamosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1676,6 +1765,14 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         IngresarDatos.add(jIngresarObrasProyecto);
+
+        jIngresarProveedores.setText("Ingresar Proveedores");
+        jIngresarProveedores.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jIngresarProveedoresMouseClicked(evt);
+            }
+        });
+        IngresarDatos.add(jIngresarProveedores);
 
         jIngresarHorasTrabajo.setText("Ingresar Horas Trabajadas de Empleados");
         jIngresarHorasTrabajo.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1808,6 +1905,10 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(jPanelIngresarHerramientas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelAlterarHerramientas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanelIngresoProveedores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1840,6 +1941,8 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(jPanelIngresarHerramientas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelAlterarHerramientas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanelIngresoProveedores, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -1851,6 +1954,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelIngresoDatosPersonas.hide();
         jPanelIngresoDatosProyecto.hide();
         jPanelIngresoDatosObras.hide();
+        jPanelIngresoProveedores.hide();
         jPanelIngresoDatosHoras.hide();
         jPanelIngresarHerramientas.hide();
         jPanelCrearPrestamos.hide();
@@ -1871,6 +1975,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelIngresoDatosPersonas.hide();
         jPanelIngresoDatosProyecto.hide();
         jPanelIngresoDatosObras.hide();
+        jPanelIngresoProveedores.hide();
         jPanelIngresoDatosHoras.hide();
         jPanelIngresarHerramientas.hide();
         jPanelCrearPrestamos.hide();
@@ -1891,6 +1996,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelIngresoDatosPersonas.show();
         jPanelIngresoDatosProyecto.hide();
         jPanelIngresoDatosObras.hide();
+        jPanelIngresoProveedores.hide();
         jPanelIngresoDatosHoras.hide();
         jPanelIngresarHerramientas.hide();
         jPanelCrearPrestamos.hide();
@@ -1913,6 +2019,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelIngresoDatosPersonas.hide();
         jPanelIngresoDatosProyecto.show();
         jPanelIngresoDatosObras.hide();
+        jPanelIngresoProveedores.hide();
         jPanelIngresoDatosHoras.hide();
         jPanelIngresarHerramientas.hide();
         jPanelCrearPrestamos.hide();
@@ -1932,6 +2039,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelIngresoDatosPersonas.hide();
         jPanelIngresoDatosProyecto.hide();
         jPanelIngresoDatosObras.show();
+        jPanelIngresoProveedores.hide();
         jPanelIngresoDatosHoras.hide();
         jPanelIngresarHerramientas.hide();
         jPanelCrearPrestamos.hide();
@@ -1951,6 +2059,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelIngresoDatosPersonas.hide();
         jPanelIngresoDatosProyecto.hide();
         jPanelIngresoDatosObras.hide();
+        jPanelIngresoProveedores.hide();
         jPanelIngresoDatosHoras.show();
         jPanelIngresarHerramientas.hide();
         jPanelCrearPrestamos.hide();
@@ -1962,6 +2071,9 @@ public class Menu extends javax.swing.JFrame {
         jPanelAlterarObras.hide();
         jPanelAlterarHerramientas.hide();
         jPanelAlterarPrestamos.hide();
+        
+        JOptionPane.showMessageDialog(null,"Recordar que la fecha ya sea de incio o fin debe ser ingresada con el siguiente formato: '2018-09-15' "
+                + "Respetando los guiones (Ingreselos manualmente)");
     }//GEN-LAST:event_jIngresarHorasTrabajoMouseClicked
 
     private void jCrearPrestamosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCrearPrestamosMouseClicked
@@ -1970,6 +2082,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelIngresoDatosPersonas.hide();
         jPanelIngresoDatosProyecto.hide();
         jPanelIngresoDatosObras.hide();
+        jPanelIngresoProveedores.hide();
         jPanelIngresoDatosHoras.hide();
         jPanelIngresarHerramientas.hide();
         jPanelCrearPrestamos.show();
@@ -1981,6 +2094,9 @@ public class Menu extends javax.swing.JFrame {
         jPanelAlterarObras.hide();
         jPanelAlterarHerramientas.hide();
         jPanelAlterarPrestamos.hide();
+        
+        JOptionPane.showMessageDialog(null,"Recordar que la fecha debe ser ingresada con el siguiente formato: '2018-09-15' "
+                + "Respetando los guiones (Ingreselos manualmente)");
     }//GEN-LAST:event_jCrearPrestamosMouseClicked
 
     private void jPagarEmpleadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPagarEmpleadosMouseClicked
@@ -1989,6 +2105,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelIngresoDatosPersonas.hide();
         jPanelIngresoDatosProyecto.hide();
         jPanelIngresoDatosObras.hide();
+        jPanelIngresoProveedores.hide();
         jPanelIngresoDatosHoras.hide();
         jPanelIngresarHerramientas.hide();
         jPanelCrearPrestamos.hide();
@@ -2008,6 +2125,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelIngresoDatosPersonas.hide();
         jPanelIngresoDatosProyecto.hide();
         jPanelIngresoDatosObras.hide();
+        jPanelIngresoProveedores.hide();
         jPanelIngresoDatosHoras.hide();
         jPanelIngresarHerramientas.hide();
         jPanelCrearPrestamos.hide();
@@ -2019,6 +2137,9 @@ public class Menu extends javax.swing.JFrame {
         jPanelAlterarObras.hide();
         jPanelAlterarHerramientas.hide();
         jPanelAlterarPrestamos.hide();
+        
+        JOptionPane.showMessageDialog(null,"Recordar que la fecha debe ser ingresada con el siguiente formato: '2018-09-15' "
+                + "Respetando los guiones (Ingreselos manualmente)");
     }//GEN-LAST:event_jCrearFacturasMouseClicked
 
     private void jModificarPersonasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jModificarPersonasMouseClicked
@@ -2027,6 +2148,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelIngresoDatosPersonas.hide();
         jPanelIngresoDatosProyecto.hide();
         jPanelIngresoDatosObras.hide();
+        jPanelIngresoProveedores.hide();
         jPanelIngresoDatosHoras.hide();
         jPanelIngresarHerramientas.hide();
         jPanelCrearPrestamos.hide();
@@ -2046,6 +2168,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelIngresoDatosPersonas.hide();
         jPanelIngresoDatosProyecto.hide();
         jPanelIngresoDatosObras.hide();
+        jPanelIngresoProveedores.hide();
         jPanelIngresoDatosHoras.hide();
         jPanelIngresarHerramientas.hide();
         jPanelCrearPrestamos.hide();
@@ -2065,6 +2188,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelIngresoDatosPersonas.hide();
         jPanelIngresoDatosProyecto.hide();
         jPanelIngresoDatosObras.hide();
+        jPanelIngresoProveedores.hide();
         jPanelIngresoDatosHoras.hide();
         jPanelIngresarHerramientas.hide();
         jPanelCrearPrestamos.hide();
@@ -2083,6 +2207,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelIngresoDatosPersonas.hide();
         jPanelIngresoDatosProyecto.hide();
         jPanelIngresoDatosObras.hide();
+        jPanelIngresoProveedores.hide();
         jPanelIngresoDatosHoras.hide();
         jPanelIngresarHerramientas.hide();
         jPanelCrearPrestamos.hide();
@@ -2102,6 +2227,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelIngresoDatosPersonas.hide();
         jPanelIngresoDatosProyecto.hide();
         jPanelIngresoDatosObras.hide();
+        jPanelIngresoProveedores.hide();
         jPanelIngresoDatosHoras.hide();
         jPanelIngresarHerramientas.show();
         jPanelCrearPrestamos.hide();
@@ -2121,6 +2247,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelIngresoDatosPersonas.hide();
         jPanelIngresoDatosProyecto.hide();
         jPanelIngresoDatosObras.hide();
+        jPanelIngresoProveedores.hide();
         jPanelIngresoDatosHoras.hide();
         jPanelIngresarHerramientas.hide();
         jPanelCrearPrestamos.hide();
@@ -2136,22 +2263,117 @@ public class Menu extends javax.swing.JFrame {
 
     private void jButtonConsulta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsulta1ActionPerformed
         // TODO add your handling code here:
+        ResultSet rs = InicioSesion.Methods.bdconGlobal.SelectQuery("SELECT Proyecto.ID, NombreObra, Horas, Nombre, Apellido1, Apellido2 FROM Personas JOIN Empleado \n" +
+        "ON Personas.Cedula = Empleado.Cedula JOIN Trabaja ON Empleado.Cedula = Trabaja.CodEmpleado JOIN ObrasProyecto\n" +
+        "ON Trabaja.idObra = ObrasProyecto.ID JOIN Proyecto ON ObrasProyecto.IDProyecto = Proyecto.ID\n" +
+        "WHERE Trabaja.Horas > 72", null);
+        
+        System.out.println("Consulta 1");
+        try {
+            while(rs.next()){
+                String ID = rs.getString("ID");
+                String nombreObra = rs.getString("NombreObra");
+                String horas = rs.getString("Horas");
+                String nombre = rs.getString("Nombre");
+                String apellido1 = rs.getString("Apellido1");
+                String apellido2 = rs.getString("Apellido2");
+                System.out.println("ID Proyecto: " + ID + " Nombre Obra: " + nombreObra + " Horas: " + horas + 
+                        " Nombre " + nombre + " Apellido: " + apellido1 + " Apellido: " + apellido2);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButtonConsulta1ActionPerformed
 
     private void jButtonConsulta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsulta2ActionPerformed
         // TODO add your handling code here:
+        ResultSet rs = InicioSesion.Methods.bdconGlobal.SelectQuery("SELECT NPago, FechaPago, Monto, IDProyecto, NombreObra, Nombre, Apellido1, Apellido2 FROM PagoEmpleado \n" +
+        "JOIN  Empleado ON PagoEmpleado.CedEmpleado = Empleado.Cedula JOIN Personas ON Empleado.Cedula = Personas.Cedula \n" +
+        "JOIN Trabaja ON Empleado.Cedula = Trabaja.CodEmpleado JOIN ObrasProyecto ON Trabaja.idObra = ObrasProyecto.ID \n" +
+        "JOIN Proyecto ON ObrasProyecto.IDProyecto = Proyecto.ID", null);
+        
+        System.out.println("Consulta 2");
+        try {
+            while(rs.next()){
+                String numPago = rs.getString("NPago");
+                String fechaPago = rs.getString("FechaPago");
+                String monto = rs.getString("Monto");
+                String IDProyecto = rs.getString("IDProyecto");
+                String nombreObra = rs.getString("NombreObra");
+                String nombre = rs.getString("Nombre");
+                String apellido1 = rs.getString("Apellido1");
+                String apellido2 = rs.getString("Apellido2");
+                System.out.println("Numero Pago: " + numPago + " Fecha Pago: " + fechaPago + " Monto: " + monto + 
+                        " ID Proyecto: " + IDProyecto + " Nombre Obra: " + nombreObra + " Nombre:" + nombre +
+                        " Apellido: " + apellido1 + " " + apellido2);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButtonConsulta2ActionPerformed
 
     private void jButtonConsulta3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsulta3ActionPerformed
         // TODO add your handling code here:
+        ResultSet rs = InicioSesion.Methods.bdconGlobal.SelectQuery("SELECT Herramienta.Nombre, Descripcion, FechaPrestamo, FechaDevolucion, Personas.Nombre, Apellido1, Apellido2 FROM Herramienta\n" +
+        "JOIN Prestamo ON Herramienta.Placa = Prestamo.Placa JOIN Empleado ON Prestamo.CodEmpleado = Empleado.Cedula\n" +
+        "JOIN Personas ON Personas.Cedula = Empleado.Cedula", null);
+        
+        System.out.println("Consulta 3");
+        try {
+            while(rs.next()){
+                String nombreHerra = rs.getString("Nombre");
+                String Descrip = rs.getString("Descripcion");
+                String fechaPrest = rs.getString("FechaPrestamo");
+                String fechaDevo = rs.getString("FechaDevolucion");
+                String nombre = rs.getString("Nombre");
+                String apellido1 = rs.getString("Apellido1");
+                String apellido2 = rs.getString("Apellido2");
+                System.out.println("Nombre Herramienta: " + nombreHerra + " Descripcion: " + Descrip + " Fecha Prestamo: " + fechaPrest + 
+                        " Fecha Devolucion: " + fechaDevo + " Nombre: " + nombre + " Apellido:" + apellido1 + " " + apellido2);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButtonConsulta3ActionPerformed
 
     private void jButtonConsulta4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsulta4ActionPerformed
         // TODO add your handling code here:
+        ResultSet rs = InicioSesion.Methods.bdconGlobal.SelectQuery("SELECT Nombre, Apellido1, Apellido2 FROM Personas JOIN Empleado ON Personas.Cedula = Empleado.Cedula EXCEPT\n" +
+        "SELECT Nombre, Apellido1, Apellido2 FROM Personas JOIN Empleado ON Personas.Cedula = Empleado.Cedula \n" +
+        "JOIN Trabaja ON Trabaja.CodEmpleado = Empleado.Cedula", null);
+
+        System.out.println("Consulta 4");
+        try {
+            while(rs.next()){
+                String nombre = rs.getString("Nombre");
+                String apellido1 = rs.getString("Apellido1");
+                String apellido2 = rs.getString("Apellido2");
+                
+                System.out.println("Nombre: " + nombre + " Apellido: " + apellido1 + " " + apellido2);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButtonConsulta4ActionPerformed
 
     private void jButtonConsulta5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsulta5ActionPerformed
         // TODO add your handling code here:
+        ResultSet rs = InicioSesion.Methods.bdconGlobal.SelectQuery("Select Proyecto.ID, Descripcion, HorasProyecto from \n" +
+        "Proyecto join ( \n" + "SELECT SUM(Horas)as HorasProyecto, Proyecto.ID FROM Proyecto JOIN ObrasProyecto ON Proyecto.ID = ObrasProyecto.IDProyecto\n" +
+        "JOIN Trabaja ON ObrasProyecto.ID = Trabaja.idObra Group by Proyecto.ID) as A1 on Proyecto.ID = A1.ID order by Proyecto.ID", null);
+        
+        System.out.println("Consulta 5");
+        try {
+            while(rs.next()){
+                String ID = rs.getString("ID");
+                String descrip = rs.getString("Descripcion");
+                String horasProy = rs.getString("HorasProyecto");
+                
+                System.out.println("ID: " + ID + " Descripcion: " + descrip + " Horas Proyecto: " + horasProy);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButtonConsulta5ActionPerformed
 
     private void jButtonConsultarTodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultarTodoActionPerformed
@@ -2178,20 +2400,6 @@ public class Menu extends javax.swing.JFrame {
 
     private void jButtonIngresarPersonasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIngresarPersonasActionPerformed
         // TODO add your handling code here:
-        if(jCheckBoxEmpleado.isSelected()){
-            ArrayList<String> argumentosEmpleado = new ArrayList();
-
-            argumentosEmpleado.add(jTextFieldCedula.getText());
-           
-            InicioSesion.Methods.bdconGlobal.InsertQuery("insert into Empleado(Cedula)"
-                    + "values (?)", argumentosEmpleado);
-            
-        }
-        else if(jCheckBoxContProyecto.isSelected()){
-            
-            ArrayList<String> argumentosContProyecto = new ArrayList();
-            
-        }
         try{
             ArrayList<String> argumentos = new ArrayList();
 
@@ -2209,7 +2417,247 @@ public class Menu extends javax.swing.JFrame {
         catch(Exception e){
             System.out.print("Recuerde no dejar espacios en blanco");
         }
+        
+        if(jCheckBoxEmpleado.isSelected()){
+            ArrayList<String> argumentosEmpleado = new ArrayList();
+
+            argumentosEmpleado.add(jTextFieldCedula.getText());
+           
+            InicioSesion.Methods.bdconGlobal.InsertQuery("insert into Empleado(Cedula)"
+                    + "values (?)", argumentosEmpleado);  
+        }
+        
+        else if(jCheckBoxContProyecto.isSelected()){
+            
+            jTextFieldCargo_PersonasCProyecto.setText("Encargado");
+            
+            ArrayList<String> argumentosContProyecto = new ArrayList();
+            
+            argumentosContProyecto.add(jTextFieldCedula.getText());
+            argumentosContProyecto.add(jTextFieldCargo_PersonasCProyecto.getText());
+            
+            InicioSesion.Methods.bdconGlobal.InsertQuery("insert into ContactoProyecto(Cedula, Cargo)"
+                    + "values (?,?)", argumentosContProyecto);   
+        }
+        
+        else if(jCheckBoxContProveedor.isSelected()){
+            try{
+                ArrayList<String> argumentosContProveedor = new ArrayList();
+
+                argumentosContProveedor.add(jTextFieldCedula.getText());
+                argumentosContProveedor.add(jTextFieldCargo_PersonasCProyecto.getText());
+
+                InicioSesion.Methods.bdconGlobal.InsertQuery("insert into ContactoProveedor(Cedula, Area, CodProveedor)"
+                        + "values (?,?,?)", argumentosContProveedor);  
+            }
+            catch(Exception e){
+                System.out.print("Recuerde no dejar en blanco el area y codigo de proveedor si selecciona la casilla de contacto de Proveedor");
+            }
+        }
     }//GEN-LAST:event_jButtonIngresarPersonasActionPerformed
+
+    private void jButtonIngresarProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIngresarProyectoActionPerformed
+        // TODO add your handling code here:
+        try{
+            ArrayList<String> argumentos = new ArrayList();
+
+            argumentos.add(jTextFieldIDProyecto.getText());
+            argumentos.add(jTextFieldTipoProyecto.getText());
+            argumentos.add(jTextFieldPresupuestoProyecto.getText());
+            argumentos.add(jTextFieldDescripcionProyecto.getText()); 
+            argumentos.add(jTextFieldLugarProyecto.getText());
+            argumentos.add(jTextFieldPermisoConstruccionProyecto.getText());
+
+            InicioSesion.Methods.bdconGlobal.InsertQuery("insert into Proyecto(ID, Tipo, Presupuesto, Descripcion, Lugar, PermisoConstruccion)"
+                    + "values (?,?,?,?,?,?)", argumentos);
+        }
+        catch(Exception e){
+            System.out.print("Recuerde no dejar espacios en blanco");
+        }
+    }//GEN-LAST:event_jButtonIngresarProyectoActionPerformed
+
+    private void jButtonIngresarObraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIngresarObraActionPerformed
+        // TODO add your handling code here:
+        try{
+            ArrayList<String> argumentos = new ArrayList();
+
+            argumentos.add(jTextFieldID_Obras.getText());
+            argumentos.add(jTextFieldNombre_Obras.getText());
+            argumentos.add(jTextFieldID_Proyecto_Obras.getText());
+            argumentos.add(jTextFieldDescripcion_Obras.getText());
+
+            InicioSesion.Methods.bdconGlobal.InsertQuery("insert into ObrasProyecto(ID, NombreObra, IDProyecto, Descripcion)"
+                    + "values (?,?,?,?)", argumentos);
+        }
+        catch(Exception e){
+            System.out.print("Recuerde no dejar espacios en blanco");
+        }
+    }//GEN-LAST:event_jButtonIngresarObraActionPerformed
+
+    private void jButtonIngresarProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIngresarProveedorActionPerformed
+        // TODO add your handling code here:
+        try{
+            ArrayList<String> argumentos = new ArrayList();
+
+            argumentos.add(jTextFieldCodProveedor.getText());
+            argumentos.add(jTextFieldNombre_Proveedor.getText());
+            argumentos.add(jTextFieldDireccion_Proveedor.getText());
+
+            InicioSesion.Methods.bdconGlobal.InsertQuery("insert into Proveedor(CodProveedor, Nombre, Direccion)"
+                    + "values (?,?,?)", argumentos);
+        }
+        catch(Exception e){
+            System.out.print("Recuerde no dejar espacios en blanco");
+        }
+    }//GEN-LAST:event_jButtonIngresarProveedorActionPerformed
+
+    private void jButtonIngresarHorasTrabajadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIngresarHorasTrabajadasActionPerformed
+        // TODO add your handling code here:
+        try{
+            ArrayList<String> argumentos = new ArrayList();
+
+            argumentos.add(jTextFieldHoras_Trabaja.getText());
+            argumentos.add(jTextFieldFechaInicio_Trabaja.getText());
+            argumentos.add(jTextFieldFechaFinal_Trabaja.getText());
+            argumentos.add(jTextFieldCedulaEmpleado_Trabaja.getText()); 
+            argumentos.add(jTextFieldID_Obra_Trabaja.getText());
+
+            InicioSesion.Methods.bdconGlobal.InsertQuery("insert into Trabaja(Horas, FechaInicio, FechaFin, CodEmpleado, idObra)"
+                    + "values (?,?,?,?,?)", argumentos);
+        }
+        catch(Exception e){
+            System.out.print("Recuerde no dejar espacios en blanco");
+        }
+    }//GEN-LAST:event_jButtonIngresarHorasTrabajadasActionPerformed
+
+    private void jButtonIngresarHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIngresarHerramientaActionPerformed
+        // TODO add your handling code here:
+        try{
+            ArrayList<String> argumentos = new ArrayList();
+
+            argumentos.add(jTextFieldNombre_Herramienta.getText());
+            argumentos.add(jTextFieldDescripcion_Herramienta.getText());
+            argumentos.add(jTextFieldPlaca_Herramienta.getText());
+
+            InicioSesion.Methods.bdconGlobal.InsertQuery("insert into Herramienta(Nombre, Descripcion, Placa)"
+                    + "values (?,?,?)", argumentos);
+        }
+        catch(Exception e){
+            System.out.print("Recuerde no dejar espacios en blanco");
+        }
+    }//GEN-LAST:event_jButtonIngresarHerramientaActionPerformed
+
+    private void jButtonCrearPrestamosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrearPrestamosActionPerformed
+        // TODO add your handling code here:
+        try{
+            ArrayList<String> argumentos = new ArrayList();
+
+            argumentos.add(jTextFieldID_Prestamo.getText());
+            argumentos.add(jTextFieldFechaPrestamo_Prestamo.getText());
+            argumentos.add(jTextFieldFechaDevolucionPrestamo.getText());
+            
+            if(jCheckBoxEmpleado.isSelected()){
+                argumentos.add("1");  
+            }else{
+                argumentos.add("0");
+            }
+            
+            argumentos.add(jTextFieldPlacaHerramientaPrestamo.getText()); 
+            argumentos.add(jTextFieldCedEmpleadoPrestamo.getText());
+
+            InicioSesion.Methods.bdconGlobal.InsertQuery("insert into Prestamo(ID, FechaPrestamo, FechaDevolucion, Devuelto, Placa, CodEmpleado)"
+                    + "values (?,?,?,?,?,?)", argumentos);
+        }
+        catch(Exception e){
+            System.out.print("Recuerde no dejar espacios en blanco");
+        }
+        /*
+        try{
+            ArrayList<String> argumentos = new ArrayList();
+
+            argumentos.add(jTextFieldID_Prestamo.getText());
+            argumentos.add(jTextFieldFechaPrestamo_Prestamo.getText());
+            argumentos.add(jTextFieldFechaDevolucionPrestamo.getText());
+            argumentos.add(jTextFieldPlacaHerramientaPrestamo.getText()); 
+            argumentos.add(jTextFieldCedEmpleadoPrestamo.getText());
+            
+            if(jCheckBoxEmpleado.isSelected()){
+                InicioSesion.Methods.bdconGlobal.InsertQuery("insert into Prestamo(ID, FechaPrestamo, FechaDevolucion, Devuelto, Placa, CodEmpleado)"
+                    + "values (?,?,?,1,?,?)", argumentos); 
+            }else{
+                InicioSesion.Methods.bdconGlobal.InsertQuery("insert into Prestamo(ID, FechaPrestamo, FechaDevolucion, Devuelto, Placa, CodEmpleado)"
+                    + "values (?,?,?,0,?,?)", argumentos); 
+            }
+        
+            
+        }
+        catch(Exception e){
+            System.out.print("Recuerde no dejar espacios en blanco");
+        }
+        */
+    }//GEN-LAST:event_jButtonCrearPrestamosActionPerformed
+
+    private void jButtonCrearPagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrearPagoActionPerformed
+        // TODO add your handling code here:
+        try{
+            ArrayList<String> argumentos = new ArrayList();
+
+            argumentos.add(jTextFieldNumPago.getText());
+            argumentos.add(jTextFieldCedEmpleadoPagos.getText());
+            argumentos.add(jTextFieldMontoPagos.getText());
+
+            InicioSesion.Methods.bdconGlobal.InsertQuery("insert into PagoEmpleado(NPago, CedEmpleado, Monto)"
+                    + "values (?,?,?)", argumentos);
+        }
+        catch(Exception e){
+            System.out.print("Recuerde no dejar espacios en blanco");
+        }
+    }//GEN-LAST:event_jButtonCrearPagoActionPerformed
+
+    private void jButtonCrearFacturasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrearFacturasActionPerformed
+        // TODO add your handling code here:
+         try{
+            ArrayList<String> argumentos = new ArrayList();
+
+            argumentos.add(jTextFieldIDProyecto_Factura.getText());
+            argumentos.add(jTextFieldNumFactura.getText());
+            argumentos.add(jTextFieldFecha_Factura.getText());
+            argumentos.add(jTextFieldMonto_Factura.getText()); 
+            argumentos.add(jTextFieldDetalle_Factura.getText());
+            argumentos.add(jTextFieldCodProveedor_Factura.getText());
+
+            InicioSesion.Methods.bdconGlobal.InsertQuery("insert into Factura(IDProyecto, NFactura, Fecha, Monto, Detalle, CodProveedor)"
+                    + "values (?,?,?,?,?,?)", argumentos);
+        }
+        catch(Exception e){
+            System.out.print("Recuerde no dejar espacios en blanco");
+        }
+    }//GEN-LAST:event_jButtonCrearFacturasActionPerformed
+
+    private void jButtonAlterarPersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAlterarPersonaActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButtonAlterarPersonaActionPerformed
+
+    private void jIngresarProveedoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jIngresarProveedoresMouseClicked
+        // TODO add your handling code here:
+        jPanelInicio.hide();
+        jPanelIngresoDatosPersonas.hide();
+        jPanelIngresoDatosProyecto.hide();
+        jPanelIngresoDatosObras.hide();
+        jPanelIngresoProveedores.show();
+        jPanelIngresoDatosHoras.hide();
+        jPanelIngresarHerramientas.hide();
+        jPanelCrearPrestamos.hide();
+        jPanelPagarEmpleados.hide();
+        jPanelCrearFacturas.hide();
+        jPanelConsultaDatos.hide();
+        jPanelAlterarPersonas.hide();
+        jPanelAlterarProyectos.hide();
+        jPanelAlterarObras.hide();
+        jPanelAlterarHerramientas.hide();
+        jPanelAlterarPrestamos.hide();
+    }//GEN-LAST:event_jIngresarProveedoresMouseClicked
 
     /**
      * @param args the command line arguments
@@ -2259,21 +2707,22 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton jButtonAlterarPersona;
     private javax.swing.JButton jButtonConsulta1;
     private javax.swing.JButton jButtonConsulta2;
     private javax.swing.JButton jButtonConsulta3;
     private javax.swing.JButton jButtonConsulta4;
     private javax.swing.JButton jButtonConsulta5;
     private javax.swing.JButton jButtonConsultarTodo;
+    private javax.swing.JButton jButtonCrearFacturas;
+    private javax.swing.JButton jButtonCrearPago;
+    private javax.swing.JButton jButtonCrearPrestamos;
+    private javax.swing.JButton jButtonIngresarHerramienta;
+    private javax.swing.JButton jButtonIngresarHorasTrabajadas;
+    private javax.swing.JButton jButtonIngresarObra;
     private javax.swing.JButton jButtonIngresarPersonas;
+    private javax.swing.JButton jButtonIngresarProveedor;
+    private javax.swing.JButton jButtonIngresarProyecto;
     private javax.swing.JLabel jCanton;
     private javax.swing.JLabel jCantonAlterar;
     private javax.swing.JLabel jCedEmpleadoPago;
@@ -2321,13 +2770,21 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenu jIngresarHorasTrabajo;
     private javax.swing.JMenu jIngresarObrasProyecto;
     private javax.swing.JMenu jIngresarPersonas;
+    private javax.swing.JMenu jIngresarProveedores;
     private javax.swing.JMenu jIngresarProyectos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -2367,6 +2824,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelIngresoDatosObras;
     private javax.swing.JPanel jPanelIngresoDatosPersonas;
     private javax.swing.JPanel jPanelIngresoDatosProyecto;
+    private javax.swing.JPanel jPanelIngresoProveedores;
     private javax.swing.JPanel jPanelInicio;
     private javax.swing.JPanel jPanelPagarEmpleados;
     private javax.swing.JLabel jPermisoConstruccionProyecto;
@@ -2388,15 +2846,19 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldApellido1Alterar;
     private javax.swing.JTextField jTextFieldApellido2;
     private javax.swing.JTextField jTextFieldApellido2Alterar;
+    private javax.swing.JTextField jTextFieldAreaCProveedor_Personas;
     private javax.swing.JTextField jTextFieldCanton;
     private javax.swing.JTextField jTextFieldCantonAlterar;
+    private javax.swing.JTextField jTextFieldCargo_PersonasCProyecto;
     private javax.swing.JTextField jTextFieldCedEmpleadoPagos;
     private javax.swing.JTextField jTextFieldCedEmpleadoPrestamo;
     private javax.swing.JTextField jTextFieldCedEmpleadoPrestamoAlterar;
     private javax.swing.JTextField jTextFieldCedula;
     private javax.swing.JTextField jTextFieldCedulaAlterar;
     private javax.swing.JTextField jTextFieldCedulaEmpleado_Trabaja;
+    private javax.swing.JTextField jTextFieldCodProveedor;
     private javax.swing.JTextField jTextFieldCodProveedor_Factura;
+    private javax.swing.JTextField jTextFieldCodProveedor_Personas;
     private javax.swing.JTextField jTextFieldDescripcionProyecto;
     private javax.swing.JTextField jTextFieldDescripcionProyectoAlterar;
     private javax.swing.JTextField jTextFieldDescripcion_Herramienta;
@@ -2404,6 +2866,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldDescripcion_Obras;
     private javax.swing.JTextField jTextFieldDescripcion_ObrasAlterar;
     private javax.swing.JTextField jTextFieldDetalle_Factura;
+    private javax.swing.JTextField jTextFieldDireccion_Proveedor;
     private javax.swing.JTextField jTextFieldDistrito;
     private javax.swing.JTextField jTextFieldDistritoAlterar;
     private javax.swing.JTextField jTextFieldFechaDevolucionPrestamo;
@@ -2414,9 +2877,9 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldFechaPrestamo_PrestamoAlterar;
     private javax.swing.JTextField jTextFieldFecha_Factura;
     private javax.swing.JTextField jTextFieldHoras_Trabaja;
-    private javax.swing.JTextField jTextFieldICProyecto_Factura;
     private javax.swing.JTextField jTextFieldIDProyecto;
     private javax.swing.JTextField jTextFieldIDProyectoAlterar;
+    private javax.swing.JTextField jTextFieldIDProyecto_Factura;
     private javax.swing.JTextField jTextFieldID_Obra_Trabaja;
     private javax.swing.JTextField jTextFieldID_Obras;
     private javax.swing.JTextField jTextFieldID_ObrasAlterar;
@@ -2434,6 +2897,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldNombre_HerramientaAlterar;
     private javax.swing.JTextField jTextFieldNombre_Obras;
     private javax.swing.JTextField jTextFieldNombre_ObrasAlterar;
+    private javax.swing.JTextField jTextFieldNombre_Proveedor;
     private javax.swing.JTextField jTextFieldNumFactura;
     private javax.swing.JTextField jTextFieldNumPago;
     private javax.swing.JTextField jTextFieldPermisoConstruccionProyecto;
