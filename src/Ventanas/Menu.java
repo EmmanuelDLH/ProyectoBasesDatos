@@ -182,7 +182,7 @@ public class Menu extends javax.swing.JFrame {
         jButtonConsulta4 = new javax.swing.JButton();
         jTextArea5 = new javax.swing.JTextArea();
         jButtonConsulta5 = new javax.swing.JButton();
-        jButtonConsultarTodo = new javax.swing.JButton();
+        jButtonConsultarVistas = new javax.swing.JButton();
         jPanelAlterarPersonas = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jCedulaAlterar = new javax.swing.JLabel();
@@ -268,6 +268,7 @@ public class Menu extends javax.swing.JFrame {
         jModificarObras = new javax.swing.JMenu();
         jModificarHerramientas = new javax.swing.JMenu();
         jModificarPrestamos = new javax.swing.JMenu();
+        jTriggersCursores = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1198,10 +1199,10 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jButtonConsultarTodo.setText("Consultar Todo");
-        jButtonConsultarTodo.addActionListener(new java.awt.event.ActionListener() {
+        jButtonConsultarVistas.setText("Consultas Usando Vistas");
+        jButtonConsultarVistas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonConsultarTodoActionPerformed(evt);
+                jButtonConsultarVistasActionPerformed(evt);
             }
         });
 
@@ -1232,8 +1233,8 @@ public class Menu extends javax.swing.JFrame {
                                     .addComponent(jButtonConsulta1)
                                     .addComponent(jButtonConsulta4, javax.swing.GroupLayout.Alignment.TRAILING)))))
                     .addGroup(jPanelConsultaDatosLayout.createSequentialGroup()
-                        .addGap(183, 183, 183)
-                        .addComponent(jButtonConsultarTodo)))
+                        .addGap(162, 162, 162)
+                        .addComponent(jButtonConsultarVistas)))
                 .addContainerGap(84, Short.MAX_VALUE))
         );
         jPanelConsultaDatosLayout.setVerticalGroup(
@@ -1259,9 +1260,9 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(jPanelConsultaDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextArea5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonConsulta5))
-                .addGap(34, 34, 34)
-                .addComponent(jButtonConsultarTodo)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addGap(41, 41, 41)
+                .addComponent(jButtonConsultarVistas)
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -1868,6 +1869,14 @@ public class Menu extends javax.swing.JFrame {
 
         jMenuBar1.add(AlterarDatos);
 
+        jTriggersCursores.setText("Triggers y Cursores");
+        jTriggersCursores.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTriggersCursoresMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jTriggersCursores);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -2376,27 +2385,56 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonConsulta5ActionPerformed
 
-    private void jButtonConsultarTodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultarTodoActionPerformed
+    private void jButtonConsultarVistasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultarVistasActionPerformed
         // TODO add your handling code here:
         //Escribir el codigo para imprimir todas las tablas que hay en la base de datos
-        ResultSet rs = InicioSesion.Methods.bdconGlobal.SelectQuery("Select * From Personas", null);
-        System.out.println("Tabla Personas");
+        ResultSet rs = InicioSesion.Methods.bdconGlobal.SelectQuery("Select * From ConsultaDatosEmpleado", null);
+        System.out.println("Tabla Empleados Vista");
         try {
             while(rs.next()){
-                String ced = rs.getString("Cedula");
-                String nombre = rs.getString("Nombre");
-                String apellido1 = rs.getString("Apellido1");
-                String apellido2 = rs.getString("Apellido2");
-                String provincia = rs.getString("Provincia");
-                String canton = rs.getString("Canton");
-                String distrito = rs.getString("Distrito");
-                System.out.println("Cedula: " + ced + " Nombre: " + nombre + " Apellido: " + apellido1 + 
-                        " Apellido: " + apellido2 + " Provincia: " + provincia + " Canton" + canton + " Distrito: " + distrito);
+                String ced = rs.getString("CedulaEmpleado");
+                String tel = rs.getString("Telefono");
+                String correo = rs.getString("Correo");
+                String fechaIngreso = rs.getString("FechaIngreso");
+                System.out.println("Cedula: " + ced + " Telefono: " + tel + " Correo: " + correo + 
+                        " Fecha Ingreso: " + fechaIngreso);
             }
         } catch (SQLException ex) {
             Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jButtonConsultarTodoActionPerformed
+        
+        ResultSet rs2 = InicioSesion.Methods.bdconGlobal.SelectQuery("Select * From ProyectoFactura", null);
+        System.out.println("Tabla Proyecto/Factura Vista");
+        try {
+            while(rs2.next()){
+                String ID = rs2.getString("ID");
+                String Tipo = rs2.getString("Tipo");
+                String Presupuesto = rs2.getString("Presupuesto");
+                String MontoTotalFacturas = rs2.getString("MontoTotalFacturas");
+                System.out.println("ID: " + ID + " Tipo: " + Tipo + " Presupuesto: " + Presupuesto + 
+                        " Monto Total Facturas: " + MontoTotalFacturas);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        ResultSet rs3 = InicioSesion.Methods.bdconGlobal.SelectQuery("Select * From ProyectoFactura", null);
+        System.out.println("Tabla Proyecto/Factura Vista");
+        try {
+            while(rs3.next()){
+                String cedula = rs3.getString("cedula");
+                String Nombre = rs3.getString("Nombre");
+                String Provincia = rs3.getString("Provincia");
+                String fechaIngreso = rs3.getString("fechaIngreso");
+                String Area = rs3.getString("Area");
+                String Cargo = rs3.getString("Cargo");
+                System.out.println("Cedula: " + cedula + " Nombre: " + Nombre + " Provincia: " + Provincia + 
+                        " fechaIngreso: " + fechaIngreso + " Area: " + Area + " Cargo: " + Cargo);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButtonConsultarVistasActionPerformed
 
     private void jButtonIngresarPersonasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIngresarPersonasActionPerformed
         // TODO add your handling code here:
@@ -2659,6 +2697,11 @@ public class Menu extends javax.swing.JFrame {
         jPanelAlterarPrestamos.hide();
     }//GEN-LAST:event_jIngresarProveedoresMouseClicked
 
+    private void jTriggersCursoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTriggersCursoresMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jTriggersCursoresMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -2713,7 +2756,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton jButtonConsulta3;
     private javax.swing.JButton jButtonConsulta4;
     private javax.swing.JButton jButtonConsulta5;
-    private javax.swing.JButton jButtonConsultarTodo;
+    private javax.swing.JButton jButtonConsultarVistas;
     private javax.swing.JButton jButtonCrearFacturas;
     private javax.swing.JButton jButtonCrearPago;
     private javax.swing.JButton jButtonCrearPrestamos;
@@ -2914,5 +2957,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldTipoProyectoAlterar;
     private javax.swing.JLabel jTipoProyecto;
     private javax.swing.JLabel jTipoProyectoAlterar;
+    private javax.swing.JMenu jTriggersCursores;
     // End of variables declaration//GEN-END:variables
 }
