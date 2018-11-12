@@ -7,7 +7,11 @@ package Metodos;
 
 import Clases.*;
 import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -16,6 +20,7 @@ import java.util.ArrayList;
 public class Metodos {
     public ArrayList<Usuario> UsersList = new ArrayList<Usuario>();
     public DBConnect bdconGlobal;
+    public Connection ConGlobal;
 
 //Users methods
     //Add user to UserList
@@ -49,5 +54,7 @@ public class Metodos {
         bdconGlobal.setDriver("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         bdconGlobal.setUrl("jdbc:sqlserver://localhost:1433;");
         Connection conexion = bdconGlobal.getConnection();
+        ConGlobal = conexion;
     }
+    
 }
