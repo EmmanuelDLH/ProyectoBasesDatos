@@ -183,6 +183,7 @@ public class Menu extends javax.swing.JFrame {
         jTextArea5 = new javax.swing.JTextArea();
         jButtonConsulta5 = new javax.swing.JButton();
         jButtonConsultarVistas = new javax.swing.JButton();
+        jButtonConsultaCursores = new javax.swing.JButton();
         jPanelAlterarPersonas = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jCedulaAlterar = new javax.swing.JLabel();
@@ -268,7 +269,6 @@ public class Menu extends javax.swing.JFrame {
         jModificarObras = new javax.swing.JMenu();
         jModificarHerramientas = new javax.swing.JMenu();
         jModificarPrestamos = new javax.swing.JMenu();
-        jTriggersCursores = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1206,6 +1206,8 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
+        jButtonConsultaCursores.setText("Consultas Usando Cursores");
+
         javax.swing.GroupLayout jPanelConsultaDatosLayout = new javax.swing.GroupLayout(jPanelConsultaDatos);
         jPanelConsultaDatos.setLayout(jPanelConsultaDatosLayout);
         jPanelConsultaDatosLayout.setHorizontalGroup(
@@ -1233,9 +1235,11 @@ public class Menu extends javax.swing.JFrame {
                                     .addComponent(jButtonConsulta1)
                                     .addComponent(jButtonConsulta4, javax.swing.GroupLayout.Alignment.TRAILING)))))
                     .addGroup(jPanelConsultaDatosLayout.createSequentialGroup()
-                        .addGap(162, 162, 162)
-                        .addComponent(jButtonConsultarVistas)))
-                .addContainerGap(84, Short.MAX_VALUE))
+                        .addGap(62, 62, 62)
+                        .addComponent(jButtonConsultarVistas)
+                        .addGap(58, 58, 58)
+                        .addComponent(jButtonConsultaCursores)))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
         jPanelConsultaDatosLayout.setVerticalGroup(
             jPanelConsultaDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1260,9 +1264,11 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(jPanelConsultaDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextArea5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonConsulta5))
-                .addGap(41, 41, 41)
-                .addComponent(jButtonConsultarVistas)
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addGap(42, 42, 42)
+                .addGroup(jPanelConsultaDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonConsultarVistas)
+                    .addComponent(jButtonConsultaCursores))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -1868,14 +1874,6 @@ public class Menu extends javax.swing.JFrame {
         AlterarDatos.add(jModificarPrestamos);
 
         jMenuBar1.add(AlterarDatos);
-
-        jTriggersCursores.setText("Triggers y Cursores");
-        jTriggersCursores.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTriggersCursoresMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(jTriggersCursores);
 
         setJMenuBar(jMenuBar1);
 
@@ -2697,11 +2695,6 @@ public class Menu extends javax.swing.JFrame {
         jPanelAlterarPrestamos.hide();
     }//GEN-LAST:event_jIngresarProveedoresMouseClicked
 
-    private void jTriggersCursoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTriggersCursoresMouseClicked
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jTriggersCursoresMouseClicked
-
     /**
      * @param args the command line arguments
      */
@@ -2756,6 +2749,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton jButtonConsulta3;
     private javax.swing.JButton jButtonConsulta4;
     private javax.swing.JButton jButtonConsulta5;
+    private javax.swing.JButton jButtonConsultaCursores;
     private javax.swing.JButton jButtonConsultarVistas;
     private javax.swing.JButton jButtonCrearFacturas;
     private javax.swing.JButton jButtonCrearPago;
@@ -2957,6 +2951,5 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldTipoProyectoAlterar;
     private javax.swing.JLabel jTipoProyecto;
     private javax.swing.JLabel jTipoProyectoAlterar;
-    private javax.swing.JMenu jTriggersCursores;
     // End of variables declaration//GEN-END:variables
 }
