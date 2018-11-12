@@ -1207,6 +1207,11 @@ public class Menu extends javax.swing.JFrame {
         });
 
         jButtonConsultaCursores.setText("Consultas Usando Cursores");
+        jButtonConsultaCursores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConsultaCursoresActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelConsultaDatosLayout = new javax.swing.GroupLayout(jPanelConsultaDatos);
         jPanelConsultaDatos.setLayout(jPanelConsultaDatosLayout);
@@ -2694,6 +2699,11 @@ public class Menu extends javax.swing.JFrame {
         jPanelAlterarHerramientas.hide();
         jPanelAlterarPrestamos.hide();
     }//GEN-LAST:event_jIngresarProveedoresMouseClicked
+
+    private void jButtonConsultaCursoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaCursoresActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButtonConsultaCursoresActionPerformed
 
     /**
      * @param args the command line arguments
