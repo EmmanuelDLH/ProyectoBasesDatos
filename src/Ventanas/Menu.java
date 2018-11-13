@@ -54,6 +54,9 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanelInicio = new javax.swing.JPanel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
         jPanelIngresoDatosPersonas = new javax.swing.JPanel();
         jCedula = new javax.swing.JLabel();
         jNombre = new javax.swing.JLabel();
@@ -308,15 +311,38 @@ public class Menu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Lezama.jpg"))); // NOI18N
+
+        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LezamaWorker.jpg"))); // NOI18N
+
+        jLabel38.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel38.setText("Bienvenido");
+
         javax.swing.GroupLayout jPanelInicioLayout = new javax.swing.GroupLayout(jPanelInicio);
         jPanelInicio.setLayout(jPanelInicioLayout);
         jPanelInicioLayout.setHorizontalGroup(
             jPanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 505, Short.MAX_VALUE)
+            .addGroup(jPanelInicioLayout.createSequentialGroup()
+                .addGap(119, 119, 119)
+                .addGroup(jPanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel37)
+                    .addComponent(jLabel36))
+                .addContainerGap(122, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelInicioLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel38)
+                .addGap(160, 160, 160))
         );
         jPanelInicioLayout.setVerticalGroup(
             jPanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 579, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelInicioLayout.createSequentialGroup()
+                .addContainerGap(66, Short.MAX_VALUE)
+                .addComponent(jLabel38)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel37)
+                .addGap(45, 45, 45)
+                .addComponent(jLabel36)
+                .addGap(65, 65, 65))
         );
 
         jCedula.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -3065,6 +3091,8 @@ public class Menu extends javax.swing.JFrame {
 
             InicioSesion.Methods.bdconGlobal.InsertQuery("insert into Personas(Cedula, Nombre, Apellido1, Apellido2, Provincia, Canton, Distrito, Fecha)"
                     + "values (?,?,?,?,?,?,?,?)", argumentos);
+            
+            System.out.println("Persona insertada Correctamente");
         }
         catch(Exception e){
             System.out.print("Recuerde no dejar espacios en blanco");
@@ -3081,6 +3109,8 @@ public class Menu extends javax.swing.JFrame {
             
             InicioSesion.Methods.bdconGlobal.InsertQuery("insert into ContactoEmergencia(CedPersona, CedEmpleado)"
                     + "values (?,?)", argumentos);
+            
+            System.out.println("Contacto de Emergencia Insertado");
         }
         catch(Exception e){
             System.out.print("Recuerde no dejar espacios en blanco");
@@ -3259,6 +3289,9 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

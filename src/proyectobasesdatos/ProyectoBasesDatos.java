@@ -27,7 +27,7 @@ public class ProyectoBasesDatos {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Usuario nuevo = new Usuario("Emmanuel", "Rompe20", "123456");
+        Usuario nuevo = new Usuario("Emmanuel", "emmanuel", "123456");
         InicioSesion.Methods.AddNewUser(nuevo);
         
         InicioSesion ventana = new InicioSesion();
